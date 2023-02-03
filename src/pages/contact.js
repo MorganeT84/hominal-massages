@@ -13,7 +13,7 @@ export default function Home() {
       </Head>
 
       <Layout>
-        <h1>Home page</h1>
+        <h1>Contactez-moi ... <br/> Prendre rendez-vous</h1>
       </Layout>
     </>
   )

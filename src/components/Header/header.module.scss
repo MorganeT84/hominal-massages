@@ -1,0 +1,210 @@
+@use 'sass:color';
+@use '../../styles/vars';
+@use 'sass:math';
+
+.header {
+  nav {
+    background-color: vars.$backgroundNav;
+    font-size: 1.4em;
+    width: 100%;
+    height: auto;
+
+    .menu_link_logo_mobile {
+      display: none;
+    }
+
+    .btn {
+      display: none;
+    }
+
+    .menu {
+      padding-top: 0.1em;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+
+      li {
+        text-align: center;
+        color: vars.$policeColorNav;
+
+        &:hover {
+          color: white;
+        }
+      }
+
+      .active {
+        color: white;
+      }
+
+      .menu_link_logo {
+        width: 20%;
+        position: relative;
+        align-self: flex-start;
+      }
+
+      .menu_link {
+        display: block;
+
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .header {
+    width: 100%;
+
+    .menu_link_logo_mobile {
+      width: 15%;
+      display: block;
+      position: relative;
+      align-self: flex-start;
+    }
+
+    .nav {
+      display: none;
+      width: 100%;
+
+      .menu {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        width: 100%;
+        margin-bottom: 1em;
+
+        li {
+          padding-bottom: 1em;
+          margin-top: 1em;
+          border-bottom: 1px solid white;
+
+        }
+      }
+
+      .menu_link_logo {
+        display: none;
+      }
+
+      &.active {
+        display: block;
+        display: flex;
+        justify-content: flex-end;
+
+      }
+
+    }
+  }
+
+  //* burgermenu */
+  .btn {
+    background-color: vars.$backgroundNav;
+    display: block !important;
+    border: none;
+    position: absolute;
+    right: 0.5rem;
+    top: 0.5rem;
+    bottom: 1rem;
+    cursor: pointer;
+    margin: 1rem;
+    width: 4rem;
+    height: 3rem;
+
+    .containerLines {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 3rem;
+      height: 2rem;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+
+      .line1,
+      .line2,
+      .line3,
+      .line1active,
+      .line2active,
+      .line3active {
+        width: 3rem;
+        height: 0.4rem;
+        background: vars.$policeColorNav;
+      }
+
+
+      .line1active,
+      .line2active,
+      .line3active {
+        position: absolute;
+      }
+
+      .line1 {
+        top: 18%;
+      }
+
+      .line2 {
+        top: 43%;
+      }
+
+      .line3 {
+        top: 66%;
+      }
+
+      .line1,
+      .line3 {
+        transform: rotate(0deg);
+        transition:
+          transform 0.4s ease-in-out,
+          top 0.4s 0.4s ease-in-out;
+      }
+
+      .line2 {
+        transition: opacity 0.2s 0.2s ease-in-out;
+      }
+
+      // == active == //
+      .line1active {
+        top: 43%;
+        transform: rotate(45deg);
+        transition:
+          top 0.4s ease-in-out,
+          transform 0.4s 0.4s ease-in-out;
+      }
+
+      .line2active {
+        top: 43%;
+        transition: opacity 0.4s ease-in-out;
+        opacity: 0;
+      }
+
+      .line3active {
+        top: 43%;
+        transform: rotate(-45deg);
+        transition:
+          top 0.4s ease-in-out,
+          transform 0.4s 0.4s ease-in-out;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .header {
+    width: 100%;
+
+    .menu_link_logo_mobile {
+      width: 20%;
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .header {
+
+    .menu_link_logo_mobile {
+      width: 30%;
+    }
+  }
+}
