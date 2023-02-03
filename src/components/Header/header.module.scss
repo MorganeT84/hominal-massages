@@ -56,8 +56,9 @@
     width: 100%;
 
     .menu_link_logo_mobile {
-      width: 15%;
-      display: block;
+      padding: 0.1em;
+      width: 15% !important;
+      display: block !important;
       position: relative;
       align-self: flex-start;
     }
