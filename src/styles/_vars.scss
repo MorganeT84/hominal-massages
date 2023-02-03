@@ -1,0 +1,22 @@
+@use 'sass:math';
+
+// main color 
+$backgroundMain: white;
+$backgroundNav: rgba(56, 175, 171, 0.1);
+$policeColorNav: rgb(56, 175, 171);
+
+// définition générique des titres de chaque page
+
+//title pages
+$titleH1Size: 3em;
+$titleH1Bold: 500;
+$titleH2Size: 2em;
+$titleH2Bold: 500;
+
+// breakpoints
+$smallBp: (
+  max-width:576px
+);
+$bigBp: (
+  max-width:1200px
+);
