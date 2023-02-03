@@ -49,7 +49,7 @@ export default function MentionsLegales() {
                 <p>Droits d’auteur :</p>
                 <p>
                   La reproduction ou représentation, intégrale ou partielle, du contenu de ce site est interdite  sans autorisation préalable de l’éditeur.<br />
-                  La création de liens hypertextes vers ce site est également soumise à l'accord préalable de l’éditeur.
+                  La création de liens hypertextes vers ce site est également soumise à l&apos;accord préalable de l’éditeur.
                 </p>
               </li>
             </ul>
